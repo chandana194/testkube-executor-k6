@@ -11,7 +11,7 @@ FROM debian:bullseye
 ARG CHROMIUM_VERSION=106.0.5249.61-1~deb11u1
 
 
-RUN apt install -y chromium
+RUN apt-get install chromium
 
 WORKDIR /build
 
