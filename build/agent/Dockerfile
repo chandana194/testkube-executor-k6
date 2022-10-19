@@ -10,7 +10,6 @@ FROM debian:bullseye
 
 ARG CHROMIUM_VERSION=106.0.5249.61-1~deb11u1
 
-RUN apt update
 
 RUN apt install -y chromium
 
@@ -19,7 +18,7 @@ WORKDIR /build
 ENV CGO_ENABLED=0 
 ENV GOOS=linux
 COPY . .
-RUN cd cmd/agent;go build -o /build/runner -mod mod -a .
+
 
 FROM loadimpact/k6:0.36.0
 WORKDIR /home/k6
