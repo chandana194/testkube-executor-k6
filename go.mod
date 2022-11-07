@@ -1,4 +1,4 @@
-module github.com/kubeshop/testkube-executor-k6
+module github.com/chandana194/testkube-executor-k6
 
 go 1.18
 
